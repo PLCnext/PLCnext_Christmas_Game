@@ -1,9 +1,12 @@
 # PLCnext Game
 
-Here you can find an example of a browser game programmed with Lua, which can be generated and hosted on the AXC F 2152.
-
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Web](https://img.shields.io/badge/PLCnext-Website-blue.svg)](https://www.phoenixcontact.com/plcnext)
+[![Community](https://img.shields.io/badge/PLCnext-Community-blue.svg)](https://www.plcnext-community.net)
 
 ## Introduction
+
+Here you can find an example of a browser game programmed with Lua, which can be generated and hosted on the AXC F 2152.
 
 To create the game, love.js is used, which is LÖVE ported to the web using Emscripten. More information about this free and open-source framework for 2D game development can be found here -> [LÖVE - Free 2D Game Engine (love2d.org)](https://love2d.org/)
 
