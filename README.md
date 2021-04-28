@@ -4,12 +4,12 @@ Here you can find an example of a browser game programmed with Lua, which can be
 
 ## Introduction
 
-To create the game, love.js is used, which is LÖVE ported to the web using Emscripten. More information about this free and open-source framework for 2D game development can be found here: [LÖVE - Free 2D Game Engine (love2d.org)](https://love2d.org/)
+To create the game, love.js is used, which is LÖVE ported to the web using Emscripten. More information about this free and open-source framework for 2D game development can be found here -> [LÖVE - Free 2D Game Engine (love2d.org)](https://love2d.org/)
 
 ## Example details
 
 |Description |Value  |
-| --- | --- | --- |
+| --- | --- |
 |Controller |AXC F 2152 |
 |FW |2020.6 or later |
 
