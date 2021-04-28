@@ -83,7 +83,7 @@ The game is now accessible in a web browser via port 8000.
 
 ## Starting the game in web browser
 
-In the browser you can enter the URL `ip.of.the.plc:8000` to start the game.
+In the browser you can enter the URL `http://ip.of.the.plc:8000` to start the game.
 
 **Please note** that it is not supported by all web browsers. But e.g., Firefox (Version 87.0 (64-bit)) can be used. On smartphones and tablets also the Adblock Browser can handle it (tested with version 2.7.1).
 
