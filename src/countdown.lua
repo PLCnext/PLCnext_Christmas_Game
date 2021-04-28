@@ -2,7 +2,7 @@
 -- THIS IS THE CODE FOR THE COUNTDOWN
 -- ***********************************************************************************************************************
  
-countdown = {}	-- create start sequence table
+countdown = {}	-- create countdown table
 
 
 -- ***********************************************************************************************************************
@@ -36,7 +36,7 @@ function countdown:draw()
 	-- set font
 	love.graphics.setFont(fonts.countdown)	
 	
-	-- define start text position
+	-- define countdown position
 	local counter  = {}
 	counter.text   = love.graphics.newText(fonts.countdown, time_until_start)
 	counter.width  = counter.text:getWidth()
@@ -44,7 +44,7 @@ function countdown:draw()
 	counter.x      = love.graphics.getWidth()/2  - counter.width/2
 	counter.y      = love.graphics.getHeight()/2 - counter.height/2
 	
-	-- print start text 
+	-- print countdown if time until game start > 0
 	if time_until_start >= 0 then
 		
 		-- show countdown		
