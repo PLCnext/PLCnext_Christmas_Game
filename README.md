@@ -2,6 +2,8 @@
 
 Here you can find an example of a browser game programmed with Lua, which can be generated and hosted on the AXC F 2152.
 
+[TOC]
+
 ## Introduction
 
 To create the game, love.js is used, which is LÖVE ported to the web using Emscripten. More information about this free and open-source framework for 2D game development can be found here -> [LÖVE - Free 2D Game Engine (love2d.org)](https://love2d.org/)
@@ -20,9 +22,11 @@ To create the game, love.js is used, which is LÖVE ported to the web using Emsc
 
 ## Installation steps
 
+
 ### Installation of balenaEngine
 
 Install the Docker balenaEngine on the AXC F 2152 as PLCnext App -> [PLCnext Store | balenaEngine-DockerForIOT-ARM](https://www.plcnextstore.com/963)
+
 
 ### Installation of Node.js
 
@@ -34,3 +38,71 @@ Run the "node-installation.sh" script provided here to install Node.js as a Dock
 The script will create the folder /opt/plcnext/projects/node-data that is used as shared folder with the container. For external communication port 8000 is defined. This can be adjusted in the shell script if required.
 
 If all went well, you shouldn’t see any error and Node.js welcomes you.
+
+
+### Installation of love.js
+
+Create a new PuTTY session and run `balena-engine exec -it node /bin/sh` to attach the container console.
+Now you can install love.js via `npm install -g love.js`
+
+
+## Game devolopment
+
+Now you can start programming the game. For this, the programming language Lua is used. It is an easy-to-learn and often used scripting language in the gaming world. However, it is also often used in combination with other languages, like C++, for example. You will find a lot of information and tutorials on the Internet. An overview of framework-related functions and a short introduction can also be found here: [LOVE (love2d.org)](https://love2d.org/wiki/Main_Page)
+
+In addition, you can find a game example in this GitHub repository, whose source code is also available. In this game you have to collect as many PLCnext Control devices as possible within 30 seconds. The devices appear randomly distributed on the playing area.
+
+If you like, you can also make this sample game work on your controller first.
+
+
+## Deployment of the game as a web application
+
+
+### Preparatory work
+
+Zip the source files of the game in such a way that the "main.lua" is on top level in the archive directory. Then change the file extension from *.zip* to *.love* .
+
+If you want to work with the game provided here, you can also directly download the file "PLCnext_Game.love".
+
+
+### Generating JavaScript code
+
+Transfer the *.love* file to your AXC F 2152 and place it in `/opt/plcnext/projects/node-data/MyGames`, e.g. using WinSCP.
+
+Then open the PuTTY window where you have access to the Node.js container console. Here run: 
+
+```
+cd data/MyGames
+love.js PLCnext_Game.love game -c
+cd game
+python3 -m http.server 8000
+```
+The game is now accessible in a web browser via port 8000.
+
+## Starting the game in web browser
+
+In the browser you can enter the URL `ip.of.the.plc:8000` to start the game.
+
+**Please note** that it is not supported by all web browsers. But e.g., Firefox (Version 87.0 (64-bit)) can be used. On smartphones and tablets also the Adblock Browser can handle it (tested with version 2.7.1).
+
+
+## Additonal information
+
+### How to leave the container console?
+To exit the container console, you can simply run `exit` .
+
+### How to stop and start the Node.js container?
+To stop the Node.js container, use the following command: `balena-engine stop node` 
+To start, execute: `balena-engine start node`
+
+### How to deploy an already generated game?
+If the JavaScript code is already available, so the game is in the required format, you can also start the HTTP server directly via Python. There is no need to start Node.js and to attach its container console first. Instead just change to the directory of the game and then execute the following command as admin: `python3 -m http.server <port_number>` .
+
+### Where to find more information?
+-	LOVE (love2d.org)
+-	Building love2d games for the web with love.js and Docker (kalis.me)
+-	GitHub - Davidobot/love.js: LÖVE ported to the web using Emscripten, updated to the latest Emscripten and LÖVE (v11.3)
+-	Make games quickly with LÖVE - YouTube
+-	MAKING A GAME In 3 Easy Steps Using Love2D & Lua (1/3) - YouTube
+-	MAKING A GAME In 3 Easy Steps Using Love2D & Lua (2/3) - YouTube
+-	MAKING A GAME In 3 Easy Steps Using Love2D & Lua (3/3) - YouTube
