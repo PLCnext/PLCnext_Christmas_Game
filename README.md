@@ -94,7 +94,7 @@ In the browser you can enter the URL `ip.of.the.plc:8000` to start the game.
 To exit the container console, you can simply run `exit` .
 
 ### How to stop and start the Node.js container?
-To stop the Node.js container, use the following command: `balena-engine stop node` 
+To stop the Node.js container, use the following command: `balena-engine stop node` \
 To start, execute: `balena-engine start node`
 
 ### How to deploy an already generated game?
