@@ -126,6 +126,15 @@ Provide information how feedback can be given e.g.:
 
 ## License
 
-Copyright (c) Phoenix Contact Gmbh & Co KG. All rights reserved.
+- License for game code:
+  
+  Copyright (c) Phoenix Contact Gmbh & Co KG. All rights reserved.
 
-Licensed under the [MIT](LICENSE) License.
+  Licensed under the [MIT](LICENSE) License.
+
+- License for font files in /src/assets/fonts:
+  
+  Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+- License for sound files in /src/assets/sounds
