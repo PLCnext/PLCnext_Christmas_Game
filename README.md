@@ -2,7 +2,6 @@
 
 Here you can find an example of a browser game programmed with Lua, which can be generated and hosted on the AXC F 2152.
 
-[TOC]
 
 ## Introduction
 
@@ -99,10 +98,11 @@ To start, execute: `balena-engine start node`
 If the JavaScript code is already available, so the game is in the required format, you can also start the HTTP server directly via Python. There is no need to start Node.js and to attach its container console first. Instead just change to the directory of the game and then execute the following command as admin: `python3 -m http.server <port_number>` .
 
 ### Where to find more information?
--	LOVE (love2d.org)
--	Building love2d games for the web with love.js and Docker (kalis.me)
--	GitHub - Davidobot/love.js: LÖVE ported to the web using Emscripten, updated to the latest Emscripten and LÖVE (v11.3)
--	Make games quickly with LÖVE - YouTube
--	MAKING A GAME In 3 Easy Steps Using Love2D & Lua (1/3) - YouTube
--	MAKING A GAME In 3 Easy Steps Using Love2D & Lua (2/3) - YouTube
--	MAKING A GAME In 3 Easy Steps Using Love2D & Lua (3/3) - YouTube
+The Interent is full of good tutorials and information about game devolopment with LÖVE. Here you can find a selection of some useful links:
+-	[LOVE (love2d.org)](https://love2d.org/wiki/Main_Page)
+-	[Building love2d games for the web with love.js and Docker (kalis.me)](https://kalis.me/building-love2d-games-web-docker/)
+-	[GitHub - Davidobot/love.js: LÖVE ported to the web using Emscripten, updated to the latest Emscripten and LÖVE (v11.3)](https://github.com/Davidobot/love.js/)
+-	[Make games quickly with LÖVE - YouTube](https://www.youtube.com/watch?v=u6GWjojPQiM)
+-	[MAKING A GAME In 3 Easy Steps Using Love2D & Lua (1/3) - YouTube](https://www.youtube.com/watch?v=qA267wyXHeU)
+-	[MAKING A GAME In 3 Easy Steps Using Love2D & Lua (2/3) - YouTube](https://www.youtube.com/watch?v=3CRIhC_2wTI)
+-	[MAKING A GAME In 3 Easy Steps Using Love2D & Lua (3/3) - YouTube](https://www.youtube.com/watch?v=QWoRboCnsuo)
