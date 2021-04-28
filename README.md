@@ -39,6 +39,8 @@ Run the "node-installation.sh" script provided here to install Node.js as a Dock
 ```
 The script will create the folder /opt/plcnext/projects/node-data that is used as shared folder with the container. For external communication port 8000 is defined. This can be adjusted in the shell script if required.
 
+![](https://github.com/PLCnext/PLCnextGame/blob/main/img/node-installation.PNG)
+
 If all went well, you shouldn’t see any error and Node.js welcomes you.
 
 
