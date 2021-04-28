@@ -109,3 +109,19 @@ The Interent is full of good tutorials and information about game devolopment wi
 -	[MAKING A GAME In 3 Easy Steps Using Love2D & Lua (1/3) - YouTube](https://www.youtube.com/watch?v=qA267wyXHeU)
 -	[MAKING A GAME In 3 Easy Steps Using Love2D & Lua (2/3) - YouTube](https://www.youtube.com/watch?v=3CRIhC_2wTI)
 -	[MAKING A GAME In 3 Easy Steps Using Love2D & Lua (3/3) - YouTube](https://www.youtube.com/watch?v=QWoRboCnsuo)
+
+
+## Feedback
+
+Provide information how feedback can be given e.g.:
+
+* Ask a question in our [Forum](https://www.plcnext-community.net/index.php?option=com_easydiscuss&view=categories&Itemid=221&lang=en).
+* Request a new feature on [GitHub](CONTRIBUTING.md).
+* Vote for [Popular Feature Requests](https://github.com/PLCnext/PLCnextGame/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc).
+* File a bug in [GitHub Issues](https://github.com/PLCnext/PLCnextGame/issues).
+
+## License
+
+Copyright (c) Phoenix Contact Gmbh & Co KG. All rights reserved.
+
+Licensed under the [MIT](LICENSE) License.
