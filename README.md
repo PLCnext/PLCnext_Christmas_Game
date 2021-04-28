@@ -87,6 +87,8 @@ The game is now accessible in a web browser via port 8000.
 
 In the browser you can enter the URL `http://ip.of.the.plc:8000` to start the game.
 
+![](https://github.com/PLCnext/PLCnextGame/blob/main/img/PLCnextGame_BrowserView.png)
+
 **Please note** that it is not supported by all web browsers. But e.g., Firefox (Version 87.0 (64-bit)) can be used. On smartphones and tablets also the Adblock Browser can handle it (tested with version 2.7.1).
 
 
