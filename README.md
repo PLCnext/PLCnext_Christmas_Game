@@ -6,9 +6,14 @@
 
 ## Introduction
 
-Here you can find an example of a browser game programmed with Lua, which can be generated and hosted on the AXC F 2152.
+Welcome! Here you can find a little PLCnext Christmas Game - have fun with installing and playing.
 
-To create the game, love.js is used, which is LÖVE ported to the web using Emscripten. More information about this free and open-source framework for 2D game development can be found here -> [LÖVE - Free 2D Game Engine (love2d.org)](https://love2d.org/)
+The game in this repository was programmed with Lua and can be started directly on your PC. For this you only need to install [LÖVE - Free 2D Game Engine (love2d.org)](https://love2d.org/). It allows to run the *PLCnextChristmasGame.love* file found here directly on your computer.
+
+Alternatively, you can also host the game on your PLCnext Control. It can then be provided as a browser game.
+In this case, love.js is required, which is LÖVE ported to the web using Emscripten. 
+
+The following instructions will explain how to get love.js running on the AXC F 2152 and finally how to access the game via web browser.
 
 ## Example details
 
