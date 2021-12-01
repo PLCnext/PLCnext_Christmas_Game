@@ -1,4 +1,4 @@
-# PLCnext Game
+# PLCnext Christmas Game
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Web](https://img.shields.io/badge/PLCnext-Website-blue.svg)](https://www.phoenixcontact.com/plcnext)
