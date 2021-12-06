@@ -68,7 +68,7 @@ Open the PuTTY window where you have access to the Node.js container console. He
 
 ```
 cd data/MyGames
-love.js PLCnext_Game.love game -t PLCnextChristmasGame -c
+love.js PLCnextChristmasGame.love game -t PLCnextChristmasGame -c
 cd game
 python3 -m http.server 8000
 ```
