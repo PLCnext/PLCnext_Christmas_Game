@@ -15,6 +15,8 @@ In this case, love.js is required, which is LÖVE ported to the web using Emscri
 
 The following instructions will explain how to get love.js running on the AXC F 2152 and finally how to access the game via web browser.
 
+![Alt-Text](images/GameScreen1.png)
+
 ## Example details
 
 |Description |Value  |
