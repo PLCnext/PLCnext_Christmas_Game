@@ -39,14 +39,12 @@ Install the Docker balenaEngine on the AXC F 2152 as PLCnext App -> [PLCnext Sto
 
 ### Installation of Node.js
 
-Run the "node-installation.sh" script provided here to install Node.js as a Docker container:
+A prerequisite for the next step is that your PLCnext Control has an Internet connection. Then run the "node-installation.sh" script provided here to install Node.js as a Docker container:
 
 ```
 ./node-installation.sh
 ```
 The script will create the folder /opt/plcnext/projects/node-data that is used as shared folder with the container. For external communication port 8000 is defined. This can be adjusted in the shell script if required.
-
-![](https://github.com/PLCnext/PLCnextGame/blob/main/img/node-installation.PNG)
 
 If all went well, you shouldn’t see any error and Node.js welcomes you.
 
@@ -57,46 +55,34 @@ Create a new PuTTY session and run `balena-engine exec -it node /bin/sh` to atta
 Now you can install love.js via `npm install -g love.js`
 
 
-## Game devolopment
+## Game integration
 
-Now you can start programming the game. For this, the programming language Lua is used. It is an easy-to-learn and often used scripting language in the gaming world. However, it is also often used in combination with other languages, like C++, for example. You will find a lot of information and tutorials on the Internet. An overview of framework-related functions and a short introduction can also be found here: [LOVE (love2d.org)](https://love2d.org/wiki/Main_Page)
+To run the game provided in this repository, copy the *PLCnextChristmasGame.love* file, e.g. via WinSCP, to /opt/plcnext/projects/node-data/MyGames.
 
-In addition, you can find a game example in this GitHub repository, whose source code is also available. In this game you have to collect as many PLCnext Control devices as possible within 30 seconds. The devices appear randomly distributed on the playing area.
-
-If you like, you can also make this sample game work on your controller first.
-
-
-## Deployment of the game as a web application
-
-
-### Preparatory work
-
-Zip the source files of the game in such a way that the "main.lua" is on top level in the archive directory. Then change the file extension from *.zip* to *.love* .
-
-If you want to work with the game provided here, you can also directly download the file "PLCnext_Game.love".
+Alternatively, you can also develop your own game. For this, the programming language Lua can be used, which is an easy-to-learn and often used scripting language in the gaming world. You will find a lot of information and tutorials in the Internet. An overview of framework-related functions and a short introduction can also be found here: [LOVE (love2d.org)](https://love2d.org/wiki/Main_Page), or see the link list at the end of this description. After completing the programming, zip the source files of the game in such a way that the "main.lua" is on top level in the archive directory. Then change the file extension from *.zip* to *.love*  and store this file on your PLC in /opt/plcnext/projects/node-data/MyGames.
 
 
 ### Generating JavaScript code
 
-Transfer the *.love* file to your AXC F 2152 and place it in `/opt/plcnext/projects/node-data/MyGames`, e.g. using WinSCP.
-
-Then open the PuTTY window where you have access to the Node.js container console. Here run: 
+Open the PuTTY window where you have access to the Node.js container console. Here run: 
 
 ```
 cd data/MyGames
-love.js PLCnext_Game.love game -c
+love.js PLCnext_Game.love game -t PLCnextChristmasGame -c
 cd game
 python3 -m http.server 8000
 ```
 The game is now accessible in a web browser via port 8000.
 
-## Starting the game in web browser
+## Starting the game in a web browser
 
 In the browser you can enter the URL `http://ip.of.the.plc:8000` to start the game.
 
-![](https://github.com/PLCnext/PLCnextGame/blob/main/img/PLCnextGame_BrowserView.png)
+**Please note** that it is not supported by all web browsers. But e.g., 
+- Firefox Version 87.0 (64-bit) or 
+- Microsoft Edge Version 96.0.1054.43 
 
-**Please note** that it is not supported by all web browsers. But e.g., Firefox (Version 87.0 (64-bit)) can be used. On smartphones and tablets also the Adblock Browser can handle it (tested with version 2.7.1).
+can be used.
 
 
 ## Additonal information
@@ -112,7 +98,7 @@ To start, execute: `balena-engine start node`
 If the JavaScript code is already available, so the game is in the required format, you can also start the HTTP server directly via Python. There is no need to start Node.js and to attach its container console first. Instead just change to the directory of the game and then execute the following command as admin: `python3 -m http.server <port_number>` .
 
 ### Where to find more information?
-The Interent is full of good tutorials and information about game devolopment with LÖVE. Here you can find a selection of some useful links:
+The Internet is full of good tutorials and information about game devolopment with LÖVE. Here you can find a selection of some useful links:
 -	[LOVE (love2d.org)](https://love2d.org/wiki/Main_Page)
 -	[Building love2d games for the web with love.js and Docker (kalis.me)](https://kalis.me/building-love2d-games-web-docker/)
 -	[GitHub - Davidobot/love.js: LÖVE ported to the web using Emscripten, updated to the latest Emscripten and LÖVE (v11.3)](https://github.com/Davidobot/love.js/)
@@ -132,16 +118,8 @@ Provide information how feedback can be given e.g.:
 * File a bug in [GitHub Issues](https://github.com/PLCnext/PLCnextGame/issues).
 
 ## License
-
-- License for game code:
   
-  Copyright (c) Phoenix Contact Gmbh & Co KG. All rights reserved.
+Copyright (c) Phoenix Contact Gmbh & Co KG. All rights reserved.
 
-  Licensed under the [MIT](LICENSE) License.
+Licensed under the [MIT](LICENSE) License.
 
-- License for font files in /src/assets/fonts:
-  
-  Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-
-- License for sound files in /src/assets/sounds
